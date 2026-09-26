@@ -1,0 +1,144 @@
+/* Portfolio color palette. Edit these RGB values to change the Tailwind theme. */
+:root {
+  --ink: 16 18 17;       /* #101211 page background */
+  --panel: 25 29 26;     /* #191d1a cards and panels */
+  --line: 48 55 46;      /* #30372e borders */
+  --copy: 243 243 233;   /* #f3f3e9 main text */
+  --muted: 185 194 184;  /* #b9c2b8 secondary text */
+  --lime: 197 248 106;   /* #c5f86a accent */
+}
+
+html { scroll-behavior: smooth; }
+.hero-scene {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: 430px;
+  place-items: center;
+  perspective: 1100px;
+  transform-style: preserve-3d;
+}
+.hero-scene::before {
+  position: absolute;
+  z-index: -2;
+  width: min(84vw, 370px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(var(--lime) / .16), transparent 68%);
+  content: "";
+  filter: blur(14px);
+  animation: glow 5s ease-in-out infinite alternate;
+}
+.orbit {
+  position: absolute;
+  z-index: -1;
+  width: min(78vw, 340px);
+  aspect-ratio: 1;
+  border: 1px solid rgb(var(--lime) / .36);
+  border-radius: 50%;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+.orbit-one {
+  transform: rotateX(68deg) rotateZ(-22deg);
+  animation: orbit-spin 18s linear infinite;
+}
+.orbit-two {
+  width: min(70vw, 300px);
+  border-color: rgb(var(--copy) / .19);
+  transform: rotateY(65deg) rotateZ(26deg);
+  animation: orbit-spin 24s linear infinite reverse;
+}
+.hero-photo-card {
+  position: relative;
+  width: clamp(220px, 24vw, 286px);
+  height: clamp(300px, 34vw, 360px);
+  overflow: hidden;
+  border: 1px solid rgb(var(--copy) / .23);
+  border-radius: 24px;
+  background: rgb(var(--panel));
+  box-shadow: 0 28px 90px rgb(0 0 0 / .48), 0 0 50px rgb(var(--lime) / .1);
+  transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateZ(25px);
+  transform-style: preserve-3d;
+  transition: transform .28s ease, box-shadow .28s ease;
+  will-change: transform;
+}
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  animation: photo-float 7s ease-in-out infinite;
+}
+.photo-glint {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--shine-x, 50%) var(--shine-y, 50%), rgb(255 255 255 / .23), transparent 34%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+.floating-label {
+  position: absolute;
+  z-index: 2;
+  padding: 11px 14px;
+  border: 1px solid rgb(var(--lime) / .35);
+  border-radius: 10px;
+  background: rgb(var(--panel) / .92);
+  box-shadow: 0 12px 35px rgb(0 0 0 / .28);
+  color: rgb(var(--copy));
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  transform: translateZ(75px);
+  animation: label-float 5s ease-in-out infinite;
+  pointer-events: none;
+}
+.label-code { top: 16%; right: 1%; }
+.label-city { bottom: 17%; left: 0; animation-delay: -2.5s; }
+.orbit-dot {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgb(var(--lime));
+  box-shadow: 0 0 24px rgb(var(--lime) / .85);
+  animation: orbit-dot 9s linear infinite;
+}
+.project-tilt {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  position: relative;
+  perspective: 900px;
+  transform: perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transform-style: preserve-3d;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  will-change: transform;
+}
+.project-tilt:hover {
+  border-color: rgb(var(--lime) / .65);
+  box-shadow: 0 22px 45px rgb(0 0 0 / .3);
+}
+.reveal-ready .reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .65s ease, transform .65s cubic-bezier(.2,.8,.2,1);
+}
+.reveal-ready .reveal-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+.motion-paused *, .motion-paused *::before, .motion-paused *::after { animation-play-state: paused !important; }
+@keyframes orbit-spin { to { rotate: 360deg; } }
+@keyframes orbit-dot { to { transform: rotate(360deg) translateX(148px) rotate(-360deg); } }
+@keyframes photo-float { 50% { transform: translateY(-5px) scale(1.015); } }
+@keyframes label-float { 50% { translate: 0 -9px 0; } }
+@keyframes glow { to { opacity: .65; transform: scale(1.11); } }
+@media (max-width: 640px) {
+  .hero-scene { min-height: 390px; margin: 0 -12px; }
+  .label-code { right: 4%; top: 13%; }
+  .label-city { left: 3%; bottom: 14%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal-ready .reveal-on-scroll { opacity: 1; transform: none; }
+}

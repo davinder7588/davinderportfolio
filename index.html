@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Davinderdeep Singh's software development portfolio in Calgary, Alberta.">
+  <title>Davinderdeep Singh | Developer Portfolio</title>
+  <link rel="stylesheet" href="palette.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: 'rgb(var(--ink) / <alpha-value>)',
+            panel: 'rgb(var(--panel) / <alpha-value>)',
+            line: 'rgb(var(--line) / <alpha-value>)',
+            copy: 'rgb(var(--copy) / <alpha-value>)',
+            muted: 'rgb(var(--muted) / <alpha-value>)',
+            lime: 'rgb(var(--lime) / <alpha-value>)'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-ink text-copy antialiased">
+  <header class="sticky top-0 z-10 border-b border-line bg-ink/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-5" aria-label="Main navigation">
+      <a class="font-bold tracking-tight" href="#home">Davinderdeep<span class="text-lime">.</span></a>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
+        <a class="hover:text-lime" href="#about">About</a>
+        <a class="hover:text-lime" href="#skills">Skills</a>
+        <a class="hover:text-lime" href="#projects">Projects</a>
+        <a class="hover:text-lime" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home" class="mx-auto max-w-6xl px-6">
+    <section class="grid gap-12 py-20 md:grid-cols-[1.4fr_0.6fr] md:items-center md:py-28">
+      <div>
+        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-lime">Software Development · Calgary, Alberta</p>
+        <h1 class="max-w-3xl text-5xl font-bold leading-tight tracking-tight sm:text-6xl">Hi, I’m Davinderdeep.<br><span class="text-lime">I build useful digital products.</span></h1>
+        <p class="mt-6 max-w-2xl leading-7 text-muted">I’m a SAIT Software Development graduate interested in web development and IT support. I enjoy building applications, working with databases, and solving technical problems.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a class="rounded-lg bg-lime px-5 py-3 font-semibold text-ink hover:brightness-110" href="#projects">View my projects</a>
+          <a class="rounded-lg border border-line px-5 py-3 font-semibold hover:border-lime hover:text-lime" href="#contact">Contact me</a>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-muted">
+          <a class="underline decoration-line underline-offset-4 hover:text-lime" href="https://www.linkedin.com/in/davinderdeep-singh-480643336" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a class="underline decoration-line underline-offset-4 hover:text-lime" href="https://github.com/davinder7588" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="underline decoration-line underline-offset-4 hover:text-lime" href="mailto:davinderdeepsinghsahota@gmail.com">Email ↗</a>
+        </div>
+      </div>
+      <div class="hero-scene" data-tilt aria-label="Interactive 3D portrait">
+        <div class="orbit orbit-one" aria-hidden="true"></div>
+        <div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="hero-photo-card">
+          <img class="hero-photo" src="davinderdeep-photo.jpeg" alt="Davinderdeep Singh in Calgary, standing with the city skyline behind him" width="1366" height="2048">
+          <div class="photo-glint" aria-hidden="true"></div>
+        </div>
+        <span class="floating-label label-code" aria-hidden="true">&lt; developer /&gt;</span>
+        <span class="floating-label label-city" aria-hidden="true">CALGARY · AB</span>
+        <span class="orbit-dot" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section id="about" class="border-t border-line py-16 md:py-20">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-lime">About me</p>
+      <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">Curious about how things work. Focused on making them work better.</h2>
+      <p class="mt-5 max-w-3xl leading-7 text-muted">I completed the Software Development diploma at SAIT in August 2026. My projects have taken me from planning interfaces and data models to building features, fixing errors, and documenting the result. I’m based in Calgary and interested in software development and technical support opportunities.</p>
+    </section>
+
+    <section id="skills" class="border-t border-line py-16 md:py-20">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-lime">Skills</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Tools and knowledge</h2>
+      <div class="mt-8 grid gap-4 md:grid-cols-3">
+        <article class="reveal-on-scroll rounded-xl border border-line bg-panel p-6"><h3 class="text-lg font-bold">Development</h3><p class="mt-3 leading-7 text-muted">JavaScript, TypeScript, Python, Java, C#, HTML, CSS, React, Next.js</p></article>
+        <article class="reveal-on-scroll rounded-xl border border-line bg-panel p-6"><h3 class="text-lg font-bold">Data and design</h3><p class="mt-3 leading-7 text-muted">MongoDB, Oracle SQL, SQL*Plus, Figma, UML, database design</p></article>
+        <article class="reveal-on-scroll rounded-xl border border-line bg-panel p-6"><h3 class="text-lg font-bold">Tools and practice</h3><p class="mt-3 leading-7 text-muted">Git, GitHub, VS Code, Eclipse, debugging, documentation, Agile projects</p></article>
+      </div>
+    </section>
+
+    <section id="projects" class="border-t border-line py-16 md:py-20">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-lime">Portfolio</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Selected projects</h2>
+      <div class="mt-8 grid gap-4 md:grid-cols-2">
+        <article class="project-tilt flex flex-col rounded-xl border border-line bg-panel p-6" data-tilt>
+          <p class="text-sm font-semibold text-lime">Full-stack web application</p><h3 class="mt-3 text-xl font-bold">TeckShop — Electronics Catalog</h3>
+          <p class="mt-3 leading-7 text-muted">An electronics catalog with product images, pricing, stock levels, product details, user accounts, and an admin dashboard.</p>
+          <p class="mt-4 text-sm text-muted">Next.js · React · Tailwind CSS · MongoDB · Mongoose · NextAuth.js</p>
+          <a class="mt-5 font-semibold text-lime hover:underline" href="https://github.com/mehtabdevelops/teckshop" target="_blank" rel="noopener noreferrer">View project on GitHub ↗</a>
+        </article>
+        <article class="project-tilt flex flex-col rounded-xl border border-line bg-panel p-6" data-tilt>
+          <p class="text-sm font-semibold text-lime">Mobile form development</p><h3 class="mt-3 text-xl font-bold">Advanced Form Development</h3>
+          <p class="mt-3 leading-7 text-muted">Sign-in, sign-up, and employee forms with reusable components, required fields, email validation, and password confirmation.</p>
+          <p class="mt-4 text-sm text-muted">React Native · Expo · TypeScript · Formik · Yup</p>
+          <a class="mt-5 font-semibold text-lime hover:underline" href="https://github.com/foxdog2104/AdvancedFormDevelopment" target="_blank" rel="noopener noreferrer">View project on GitHub ↗</a>
+        </article>
+        <article class="project-tilt flex flex-col rounded-xl border border-line bg-panel p-6" data-tilt>
+          <p class="text-sm font-semibold text-lime">Full-stack client project</p><h3 class="mt-3 text-xl font-bold">Gerry’s Docks &amp; Ramps</h3>
+          <p class="mt-3 leading-7 text-muted">A client website for browsing docks, ramps, and accessories, customizing orders, and submitting quote requests.</p>
+          <p class="mt-4 text-sm text-muted">React · Vite · Node.js · Express · Firebase / Firestore</p>
+          <a class="mt-5 font-semibold text-lime hover:underline" href="https://github.com/Kanwar0135/gerrys-docks-Final" target="_blank" rel="noopener noreferrer">View project on GitHub ↗</a>
+        </article>
+        <article class="project-tilt flex flex-col rounded-xl border border-line bg-panel p-6" data-tilt>
+          <p class="text-sm font-semibold text-lime">IoT monitoring and AI assistance</p><h3 class="mt-3 text-xl font-bold">EmerGex — Sensor Monitoring</h3>
+          <p class="mt-3 leading-7 text-muted">A dashboard for sensor readings, temperature warnings, incident history, and AI-suggested responses reviewed by a human.</p>
+          <p class="mt-4 text-sm text-muted">React · Vite · Python · Azure Functions · Azure Blob Storage</p>
+          <a class="mt-5 font-semibold text-lime hover:underline" href="https://github.com/davinder7588/emergex-dashboard" target="_blank" rel="noopener noreferrer">View project on GitHub ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="border-t border-line py-16 md:py-20">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-lime">Contact</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Let’s connect.</h2>
+      <p class="mt-4 max-w-2xl leading-7 text-muted">I’m interested in software development and IT support opportunities in Calgary.</p>
+      <div class="mt-8 grid gap-4 sm:grid-cols-3">
+        <a class="rounded-xl border border-line bg-panel p-5 hover:border-lime" href="mailto:davinderdeepsinghsahota@gmail.com"><span class="block text-sm text-muted">Email</span><span class="mt-2 block break-all font-semibold">davinderdeepsinghsahota@gmail.com</span></a>
+        <a class="rounded-xl border border-line bg-panel p-5 hover:border-lime" href="https://www.linkedin.com/in/davinderdeep-singh-480643336" target="_blank" rel="noopener noreferrer"><span class="block text-sm text-muted">LinkedIn</span><span class="mt-2 block font-semibold">View my profile ↗</span></a>
+        <a class="rounded-xl border border-line bg-panel p-5 hover:border-lime" href="https://github.com/davinder7588" target="_blank" rel="noopener noreferrer"><span class="block text-sm text-muted">GitHub</span><span class="mt-2 block font-semibold">View my profile ↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-6 text-sm text-muted"><span>© 2026 Davinderdeep Singh · Calgary, Alberta</span><div class="flex items-center gap-5"><button class="motion-toggle rounded-md border border-line px-3 py-2 text-sm hover:border-lime hover:text-lime" type="button" aria-pressed="false">Pause motion</button><a class="hover:text-lime" href="#home">Back to top ↑</a></div></div>
+  </footer>
+<script>
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  // Give the portrait and project cards a gentle 3D tilt as the pointer moves.
+  if (!reducedMotion && finePointer) {
+    document.querySelectorAll('[data-tilt]').forEach((card) => {
+      card.addEventListener('pointermove', (event) => {
+        const bounds = card.getBoundingClientRect();
+        const x = (event.clientX - bounds.left) / bounds.width;
+        const y = (event.clientY - bounds.top) / bounds.height;
+        card.style.setProperty('--tilt-x', `${(0.5 - y) * 11}deg`);
+        card.style.setProperty('--tilt-y', `${(x - 0.5) * 13}deg`);
+        card.style.setProperty('--shine-x', `${x * 100}%`);
+        card.style.setProperty('--shine-y', `${y * 100}%`);
+      });
+      card.addEventListener('pointerleave', () => {
+        card.style.setProperty('--tilt-x', '0deg');
+        card.style.setProperty('--tilt-y', '0deg');
+        card.style.setProperty('--shine-x', '50%');
+        card.style.setProperty('--shine-y', '50%');
+      });
+    });
+  }
+
+  // Reveal project and skill cards as they enter the screen.
+  if (!reducedMotion && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('reveal-ready');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal-on-scroll').forEach((item) => observer.observe(item));
+  }
+
+  // Let visitors pause the continuous orbit and floating effects.
+  const motionButton = document.querySelector('.motion-toggle');
+  motionButton.addEventListener('click', () => {
+    const paused = document.documentElement.classList.toggle('motion-paused');
+    motionButton.setAttribute('aria-pressed', String(paused));
+    motionButton.textContent = paused ? 'Resume motion' : 'Pause motion';
+  });
+</script>
+</body>
+</html>
